@@ -1,16 +1,18 @@
-import { items } from '../models/dataModel.js';
+import { products } from '../models/dataModel.js';
 
 export default async function routes(fastify, options) {
+
+    
   fastify.get('/', async (request, reply) => {
-    return reply.view('/views/index.ejs', { items });
+    return reply.view('/index.ejs', { products });
   });
 
   fastify.get('/about', async (request, reply) => {
-    return reply.view('/views/about.ejs');
+    return reply.view('/pages/about.ejs');
   });
 
   fastify.get('/form', async (request, reply) => {
-    return reply.view('/views/form.ejs');
+    return reply.view('/pages/form.ejs');
   });
 
   fastify.post('/submit', async (request, reply) => {

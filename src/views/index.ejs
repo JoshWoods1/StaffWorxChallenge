@@ -1,0 +1,20 @@
+<%- include('./partials/header') %>
+<%- include('./partials/navigation') %>
+<main>
+
+  <h1>Items</h1>
+  <ul>
+    <% products.forEach(product => { %>
+      <li>
+        <strong><%= product.name %></strong> 
+        (<em><%= product.category %></em>) - 
+        $<%= product.price.toFixed(2) %> — 
+        Stock: <%= product.stock %><br>
+        <small><%= product.description %></small>
+      </li>
+      <% }) %>
+    </ul>
+    <a href="/form">Go to form</a>
+  </main>
+
+<%- include('./partials/footer') %>
