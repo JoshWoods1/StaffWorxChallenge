@@ -1,5 +1,5 @@
 import Fastify from 'fastify';
-import formbody from 'fastify-formbody';
+import formbody from '@fastify/formbody';
 import fastifyView from '@fastify/view';
 import fastifyStatic from '@fastify/static';
 import path from 'path';
@@ -11,7 +11,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const fastify = Fastify({ logger: true });
-
+fastify.register(formbody);
 fastify.register(fastifyStatic, {
   root: path.join(__dirname, 'public'),
 });

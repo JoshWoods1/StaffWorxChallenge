@@ -1,20 +1,26 @@
-<%- include('./partials/header') %>
-<%- include('./partials/navigation') %>
+<%- include('./partials/header') %> <%- include('./partials/navigation') %>
 <main>
-
-  <h1>Items</h1>
+  <h1>Products</h1>
   <ul>
     <% products.forEach(product => { %>
-      <li>
-        <strong><%= product.name %></strong> 
-        (<em><%= product.category %></em>) - 
-        $<%= product.price.toFixed(2) %> — 
-        Stock: <%= product.stock %><br>
-        <small><%= product.description %></small>
-      </li>
-      <% }) %>
-    </ul>
-    <a href="/form">Go to form</a>
-  </main>
+    <li>
+      <strong><%= product.name %></strong>
+      (<em><%= product.category %></em>) - $<%= product.price.toFixed(2) %> —
+      Stock: <%= product.stock %><br />
+      <small><%= product.description %></small>
+    </li>
+    <% }) %>
+  </ul>
+  <a href="/products">Add Products</a>
+
+  <h2>Messages</h2>
+  <ul>
+    <% messages.forEach(m => { %>
+    <li><strong><%= m.name %></strong>: <%= m.message %></li>
+    <% }) %>
+  </ul>
+
+  <a href="/form">Submit a Message</a>
+</main>
 
 <%- include('./partials/footer') %>
