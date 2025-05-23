@@ -6,8 +6,8 @@ This is a simple Node.js web application built with [Fastify](https://fastify.de
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/staffworx-challenge.git
-cd staffworx-challenge
+git clone https://github.com/your-username/StaffWorxChallenge.git
+cd StaffWorxChallenge
 ```
 
 ### 2. Install dependencies
